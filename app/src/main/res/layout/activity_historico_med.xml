@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/azul_escuro"
+    android:layout_height="match_parent"
+    tools:context=".HistoricoMed">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Pergunta: É fumante? -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Você é fumante?"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="8dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupSmoking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/radioNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textColor="@color/white"/>
+            </RadioGroup>
+
+            <!-- Pergunta: Peso (kg) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peso (kg)"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <EditText
+                android:id="@+id/editTextWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="Ex: 70.5"/>
+
+            <!-- Pergunta: Altura (cm) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Altura (cm)"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <EditText
+                android:id="@+id/editTextHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="Ex: 175"/>
+
+            <!-- Pergunta: Problemas Cardíacos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Você tem problemas cardíacos?"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupHeartIssues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioHeartYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/radioHeartNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textColor="@color/white"/>
+            </RadioGroup>
+
+            <!-- Pergunta: Histórico de Doenças -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Histórico de doenças (ex: diabetes, hipertensão)"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <EditText
+                android:id="@+id/editTextDiseaseHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Descreva seu histórico médico"/>
+
+            <!-- Pergunta: Atividade física -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pratica atividade física regularmente?"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioExerciseYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/radioExerciseNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textColor="@color/white"/>
+            </RadioGroup>
+
+            <!-- Pergunta: Consultas médicas -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequência de consultas médicas por ano"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <EditText
+                android:id="@+id/editTextDoctorVisits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Ex: 2"/>
+
+            <!-- Pergunta: Medicamentos contínuos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faz uso de medicamentos contínuos?"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupMedication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMedicationYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/radioMedicationNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textColor="@color/white"/>
+            </RadioGroup>
+
+            <!-- Pergunta: Quais medicamentos -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quais medicamentos?"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:paddingTop="16dp"/>
+
+            <EditText
+                android:id="@+id/editTextMedication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Ex: Losartana, Metformina"/>
+
+            <!-- Botão de Enviar -->
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:paddingTop="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
